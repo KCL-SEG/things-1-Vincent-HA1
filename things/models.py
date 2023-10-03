@@ -6,7 +6,7 @@ class Thing(models.Model):
     name = models.CharField(
         unique=True,
         blank = False,
-        max_length=30,
+        max_length=30
     )
     description = models.CharField(
         unique = False,
@@ -17,7 +17,7 @@ class Thing(models.Model):
         unique = False,
         validators = [
             MaxValueValidator(100),
-            MinValueValidator(0)
+            MinValueValidator(0),
         ]
     )
 
